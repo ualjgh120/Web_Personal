@@ -560,180 +560,190 @@ body.dark .btn-primary {
 
 .hero-visual {
   position: relative;
+  isolation: isolate;
+}
+
+.hero-photo {
+  position: relative;
+
+  width: min(100%, 500px);
+
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   isolation: isolate;
 }
 
-.hero-visual::before {
-  content: "";
-
+.hero-photo-glow {
   position: absolute;
 
-  width: 170px;
-  height: 170px;
-
-  top: -55px;
-  right: -45px;
-
-  border-radius: 50%;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--mint),
-      var(--cyan)
-    );
-
-  opacity: 0.8;
-
-  z-index: -1;
-}
-
-.hero-visual::after {
-  content: "";
-
-  position: absolute;
-
-  width: 100px;
-  height: 100px;
-
-  bottom: -40px;
-  left: -35px;
-
-  border: 1px solid var(--blue);
-
-  border-radius: 50%;
-
-  opacity: 0.35;
-
-  z-index: -1;
-}
-
-.hero-card {
-  position: relative;
-
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      145deg,
-      #171925,
-      #10111a
-    );
-
-  color: #f4f5fb;
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  border-radius: var(--radius-lg);
-
-  box-shadow: var(--shadow-lg);
-
-  transform: rotate(1.8deg);
-
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease;
-}
-
-.hero-card::after {
-  content: "";
-
-  position: absolute;
-
-  width: 260px;
-  height: 260px;
-
-  right: -120px;
-  bottom: -150px;
+  width: 430px;
+  height: 430px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(37, 99, 235, 0.25),
-      transparent 70%
+      rgba(37, 99, 235, 0.34),
+      rgba(14, 165, 233, 0.16) 40%,
+      transparent 72%
+    );
+
+  filter: blur(12px);
+
+  z-index: -2;
+
+  animation: photoGlow 5s ease-in-out infinite;
+}
+
+.hero-photo::before {
+  content: "";
+
+  position: absolute;
+
+  width: 92%;
+  height: 92%;
+
+  border-radius: 34px;
+
+  border:
+    1px solid
+    rgba(103, 232, 249, 0.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(37, 99, 235, 0.10),
+      rgba(14, 165, 233, 0.03)
+    );
+
+  transform:
+    rotate(4deg)
+    translate(12px, 10px);
+
+  z-index: -1;
+}
+
+.hero-photo-frame {
+  position: relative;
+
+  width: 390px;
+  height: 480px;
+
+  max-width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 34px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.18);
+
+  background: #151722;
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.38),
+    0 0 70px rgba(37, 99, 235, 0.18);
+
+  transform: rotate(-2deg);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.hero-photo-frame::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(37, 99, 235, 0.10),
+      transparent 35%,
+      rgba(14, 165, 233, 0.12)
     );
 
   pointer-events: none;
 }
 
-.hero-card:hover {
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  filter:
+    saturate(0.96)
+    contrast(1.03);
+
+  transition:
+    transform 0.6s ease;
+}
+
+.hero-photo:hover .hero-photo-frame {
   transform:
     rotate(0deg)
     translateY(-7px);
 
   box-shadow:
-    0 45px 120px rgba(21, 23, 34, 0.22);
+    0 45px 110px rgba(0, 0, 0, 0.44),
+    0 0 90px rgba(37, 99, 235, 0.25);
 }
 
-.terminal-top {
-  height: 48px;
+.hero-photo:hover .hero-photo-frame img {
+  transform: scale(1.025);
+}
+
+.hero-photo-info {
+  width: 390px;
+  max-width: 88%;
 
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 
-  gap: 7px;
+  margin-top: 20px;
 
-  padding: 0 17px;
-
-  border-bottom:
-    1px solid rgba(255, 255, 255, 0.09);
-}
-
-.terminal-top span {
-  width: 8px;
-  height: 8px;
-
-  border-radius: 50%;
-
-  background: #55596b;
-}
-
-.terminal-top b {
-  margin-left: auto;
-
-  color: #73788a;
-
-  font-size: 9px;
-  font-weight: 400;
-}
-
-.hero-card pre {
-  position: relative;
-  z-index: 2;
-
-  margin: 0;
-
-  min-height: 410px;
-
-  padding: 29px;
-
-  overflow: auto;
+  color: #777d90;
 
   font:
-    11px/2
+    9px
     "DM Mono",
     monospace;
 
-  color: #d5d8e4;
-
-  scrollbar-width: thin;
+  letter-spacing: 0.08em;
 }
 
-.key {
-  color: #a9b6ff;
+.hero-photo-info span:last-child {
+  color: #67e8f9;
 }
 
-.str {
-  color: #8be8c4;
-}
+@keyframes photoGlow {
 
-.bool {
-  color: #d0b7ff;
-}
+  0%,
+  100% {
+    transform: scale(0.98);
+    opacity: 0.75;
+  }
 
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+
+}
 
 /* =========================================================
    07. MARQUEE
