@@ -1498,17 +1498,16 @@ body.dark .btn-primary {
 
   text-decoration: underline;
 }
-
 .contact-meta {
   display: flex;
-
   flex-wrap: wrap;
-
   justify-content: center;
+  gap: 12px 28px;
 
-  gap: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
 
-  font-size: 9px;
+  letter-spacing: 0.02em;
 }
 
 .contact-meta a:hover {
