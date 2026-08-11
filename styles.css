@@ -504,7 +504,7 @@ h1 em {
   color: white;
 
   box-shadow:
-    0 10px 25px rgba(88, 86, 232, 0.18);
+    0 10px 25px rgba(37, 99, 235, 0.18);
 }
 
 .btn-primary:hover {
@@ -512,7 +512,7 @@ h1 em {
   border-color: var(--blue-dark);
 
   box-shadow:
-    0 15px 35px rgba(88, 86, 232, 0.25);
+      0 15px 35px rgba(37, 99, 235, 0.25);
 }
 
 body.dark .btn-primary {
@@ -821,27 +821,17 @@ body.dark .btn-primary {
 .section-label::before {
   content: "";
 
-  width: 48px;
+  width: 34px;
   height: 2px;
 
-  background: var(--blue);
-
   border-radius: 999px;
-}
 
-
-.section-label::before {
-  content: "";
-
-  width: 34px;
-  height: 1px;
-
- background:
-  linear-gradient(
-    90deg,
-    #2563eb,
-    #0ea5e9
-  );
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      #0ea5e9
+    );
 }
 
 
