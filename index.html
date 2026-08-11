@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio profesional de Juan Gonzalez Haro — Ingeniería Informática, Consultoría IT, Desarrollo Web, Seguridad de la Información y Sistemas de Información.">
+  <meta name="theme-color" content="#0b0d12">
+  <title>Juan Gonzalez Haro — Ingeniero Informático</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a class="brand" href="#inicio">JGH<span>.</span></a>
+      <div class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <button class="theme-btn" id="themeBtn" aria-label="Cambiar tema">◐</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero container">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse"></span> Disponible para oportunidades IT</div>
+        <h1>Juan Gonzalez<br><em>Haro.</em></h1>
+        <p class="hero-role">Ingeniero Informático · Consultoría IT · Desarrollo Web · Seguridad de la Información</p>
+        <p class="hero-text">
+          Graduado en Ingeniería Informática por la Universidad de Almería, con doble mención en
+          Sistemas de la Información y Tecnologías de la Información. Combino desarrollo de software,
+          gestión IT, datos y seguridad para convertir necesidades de negocio en soluciones digitales.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos <span>↗</span></a>
+          <a class="btn btn-ghost" href="cv/CV_Juan_Gonzalez_Haro_Ingenieria_Informatica.pdf" target="_blank" rel="noopener">Ver CV <span>↗</span></a>
+        </div>
+        <div class="quick-links">
+          <a href="mailto:juangonzalezharo@gmail.com">Email</a>
+          <span>·</span>
+          <a href="tel:+34606166185">606 16 61 85</a>
+          <span>·</span>
+          <span>Almería, España</span>
+        </div>
+      </div>
+
+      <div class="hero-card reveal delay-1">
+        <div class="terminal-top"><span></span><span></span><span></span><b>profile.json</b></div>
+        <pre><code>{
+  <span class="key">"name"</span>: <span class="str">"Juan Gonzalez Haro"</span>,
+  <span class="key">"role"</span>: <span class="str">"Ingeniero Informático"</span>,
+  <span class="key">"focus"</span>: [
+    <span class="str">"IT Consulting"</span>,
+    <span class="str">"Web Development"</span>,
+    <span class="str">"Information Security"</span>,
+    <span class="str">"Business Intelligence"</span>
+  ],
+  <span class="key">"education"</span>: <span class="str">"UAL · 2022–2026"</span>,
+  <span class="key">"status"</span>: <span class="bool">"open_to_work"</span>
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Tecnologías y áreas">
+      <div class="marquee-track">
+        <span>CONSULTORÍA IT</span><i>✦</i><span>DESARROLLO WEB</span><i>✦</i>
+        <span>SEGURIDAD</span><i>✦</i><span>ISO 27000</span><i>✦</i>
+        <span>POWER BI</span><i>✦</i><span>SQL</span><i>✦</i><span>REACT</span><i>✦</i>
+        <span>CONSULTORÍA IT</span><i>✦</i><span>DESARROLLO WEB</span><i>✦</i>
+        <span>SEGURIDAD</span><i>✦</i><span>ISO 27000</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="section container" id="sobre-mi">
+      <div class="section-label">01 — Sobre mí</div>
+      <div class="about-grid">
+        <div>
+          <h2>Perfil técnico con<br><span>visión de negocio.</span></h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            Mi perfil une ingeniería informática, sistemas de información y gestión empresarial.
+            He trabajado en proyectos de consultoría IT, desarrollo web full-stack, seguridad de
+            la información y herramientas de transformación digital.
+          </p>
+          <p>
+            Me interesa especialmente el punto donde tecnología, procesos y negocio se encuentran:
+            analizar un problema, diseñar una solución sólida y llevarla hasta producción.
+          </p>
+          <div class="stats">
+            <div><strong>2026</strong><span>Graduación</span></div>
+            <div><strong>2</strong><span>Menciones UAL</span></div>
+            <div><strong>IT</strong><span>Especialización</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="experiencia">
+      <div class="section-label">02 — Experiencia</div>
+      <div class="timeline">
+        <article class="timeline-item featured reveal">
+          <div class="date">2025 — ACTUALIDAD</div>
+          <div class="timeline-content">
+            <span class="tag">Administración · Contabilidad</span>
+            <h3>Suministros El Parque, S.L.</h3>
+            <p>
+              Gestión administrativa y contable simultánea: documentación, clientes y proveedores,
+              facturación, pedidos, gestión bancaria, conciliación y apoyo a contabilidad general.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="date">2024 — 2025</div>
+          <div class="timeline-content">
+            <span class="tag">Seguridad de la Información</span>
+            <h3>Proyecto INCIBE · Ayuntamiento de Sorbas</h3>
+            <p>
+              Elaboración de un Sistema de Gestión de Seguridad de la Información (SGSI) para una
+              administración pública, aplicando ISO 27000, RGPD y estándares de INCIBE.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="date">2024 — 2025</div>
+          <div class="timeline-content">
+            <span class="tag">Desarrollo Web · Freelance</span>
+            <h3>Empresa privada</h3>
+            <p>
+              Desarrollo web empresarial responsive de extremo a extremo, bases de datos relacionales,
+              formularios de contacto, SEO y optimización de experiencia de usuario.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="date">PROYECTO ACADÉMICO</div>
+          <div class="timeline-content">
+            <span class="tag">ITIL · Procesos TI</span>
+            <h3>Consultoría de Procesos TI y Gestión ITIL · UAL</h3>
+            <p>
+              Modelado de procesos y fichas para Desarrollo de APIs y Microservicios. Diseño de un
+              plan ITIL v3 para Gestión de Incidentes, Problemas y Cambios con Jira Service Management.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="proyectos">
+      <div class="container">
+        <div class="section-label">03 — Proyectos destacados</div>
+        <div class="projects-grid">
+          <article class="project project-large reveal">
+            <div class="project-number">01</div>
+            <div class="project-body">
+              <div class="project-meta">WEB APP · PRODUCCIÓN</div>
+              <h3>MenteActiva</h3>
+              <p>
+                Plataforma web de estimulación cognitiva para personas mayores, con juegos de memoria,
+                cálculo y seguimiento para cuidadores.
+              </p>
+              <div class="chips">
+                <span>React 18</span><span>TypeScript</span><span>Vite</span><span>Supabase</span><span>PostgreSQL</span>
+              </div>
+              <div class="project-note">Tests automatizados · Vitest · Playwright · Vercel</div>
+            </div>
+          </article>
+
+          <article class="project reveal delay-1">
+            <div class="project-number">02</div>
+            <div class="project-body">
+              <div class="project-meta">TRANSFORMACIÓN DIGITAL</div>
+              <h3>APTI 2026</h3>
+              <p>Herramienta de autoevaluación de madurez digital desplegada en producción mediante GitHub Pages.</p>
+              <div class="chips"><span>Web</span><span>Evaluación</span><span>GitHub Pages</span></div>
+            </div>
+          </article>
+
+          <article class="project reveal delay-2">
+            <div class="project-number">03</div>
+            <div class="project-body">
+              <div class="project-meta">SEGURIDAD · SGSI</div>
+              <h3>Seguridad para AA.PP.</h3>
+              <p>Diseño y documentación de un SGSI aplicado a una administración pública bajo ISO 27000 y RGPD.</p>
+              <div class="chips"><span>ISO 27000</span><span>RGPD</span><span>INCIBE</span></div>
+            </div>
+          </article>
+
+          <article class="project project-wide reveal">
+            <div class="project-number">04</div>
+            <div class="project-body">
+              <div class="project-meta">WEB CORPORATIVA</div>
+              <h3>Suministros El Parque</h3>
+              <p>Diseño y desarrollo integral de la web corporativa de la empresa, desde la arquitectura hasta el despliegue.</p>
+              <div class="chips"><span>Responsive</span><span>UX</span><span>SEO</span><span>Web</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="habilidades">
+      <div class="section-label">04 — Habilidades</div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3>Ingeniería & desarrollo</h3>
+          <ul>
+            <li>Desarrollo de aplicaciones web</li>
+            <li>Bases de datos · SQL</li>
+            <li>Modelado E-R · UML</li>
+            <li>React · TypeScript · Vite</li>
+            <li>Integración mediante Web Services</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal delay-1">
+          <h3>Seguridad & sistemas</h3>
+          <ul>
+            <li>SGSI · ISO 27000</li>
+            <li>RGPD · cumplimiento</li>
+            <li>COBIT · CISA</li>
+            <li>Auditoría de sistemas</li>
+            <li>Políticas y estrategias de seguridad</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal delay-2">
+          <h3>Datos & gestión</h3>
+          <ul>
+            <li>Power BI · dashboards</li>
+            <li>Modelado dimensional · OLAP</li>
+            <li>SQL analítico</li>
+            <li>BPMN · procesos de negocio</li>
+            <li>ITIL · gestión de proyectos</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal delay-3">
+          <h3>Competencias</h3>
+          <ul>
+            <li>Comunicación</li>
+            <li>Organización y gestión del tiempo</li>
+            <li>Trabajo en equipo</li>
+            <li>Liderazgo</li>
+            <li>Adaptación tecnológica</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cv-section">
+      <div class="container cv-inner">
+        <div>
+          <div class="section-label">05 — Currículum</div>
+          <h2>Dos perfiles,<br><span>una trayectoria.</span></h2>
+          <p>Descarga la versión de mi CV más adecuada para la oportunidad profesional.</p>
+        </div>
+        <div class="cv-buttons">
+          <a class="cv-card" href="cv/CV_Juan_Gonzalez_Haro_Ingenieria_Informatica.pdf" target="_blank" rel="noopener">
+            <span>01</span><strong>Ingeniería Informática</strong><small>Consultoría · Web · Seguridad</small><b>↗</b>
+          </a>
+          <a class="cv-card" href="cv/CV_Juan_Gonzalez_Haro_Administrativo_Contable.pdf" target="_blank" rel="noopener">
+            <span>02</span><strong>Administrativo y Contable</strong><small>Gestión · Excel · Power BI</small><b>↗</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-inner">
+        <div class="section-label">06 — Contacto</div>
+        <h2>¿Hablamos?</h2>
+        <p>Estoy interesado en oportunidades donde pueda aportar en tecnología, sistemas, datos o seguridad.</p>
+        <a class="contact-email" href="mailto:juangonzalezharo@gmail.com">juangonzalezharo@gmail.com <span>↗</span></a>
+        <div class="contact-meta">
+          <span>Almería, España</span>
+          <span>·</span>
+          <a href="tel:+34606166185">+34 606 16 61 85</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Juan Gonzalez Haro</span>
+      <span>Built for GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
