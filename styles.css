@@ -1044,23 +1044,20 @@ body.dark .btn-primary {
 .dark-section .section-label {
   color: #777d90;
 }
-
 .projects-grid {
   position: relative;
   z-index: 2;
 
   display: grid;
 
-  grid-template-columns:
-    repeat(12, 1fr);
+  grid-template-columns: 1fr;
 
   gap: 16px;
 }
-
 .project {
   position: relative;
 
-  grid-column: span 5;
+  grid-column: 1 / -1;
 
   min-height: 330px;
 
@@ -1090,6 +1087,7 @@ body.dark .btn-primary {
     border-color 0.35s ease,
     background 0.35s ease;
 }
+
 
 .project::before {
   content: "";
@@ -1134,10 +1132,11 @@ body.dark .btn-primary {
 }
 
 .project-large {
-  grid-column: span 7;
+  grid-column: 1 / -1;
 
   min-height: 470px;
 }
+
 
 .project-wide {
   grid-column: 1 / -1;
