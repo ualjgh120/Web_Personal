@@ -1504,10 +1504,18 @@ body.dark .btn-primary {
   justify-content: center;
   gap: 12px 28px;
 
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 
   letter-spacing: 0.02em;
+}
+
+.contact-meta a {
+  font-size: 16px;
+}
+
+.contact-meta a:hover {
+  text-decoration: underline;
 }
 
 .contact-meta a:hover {
