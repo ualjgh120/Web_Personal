@@ -1964,14 +1964,16 @@ text-transform: uppercase;
       0;
   }
 
-  .section-label {
-    margin-bottom: 38px;
+.section-label {
+  margin-bottom: 38px;
 
-    font-size: 8px;
-  }
+  font-size: 10px;
+
+  letter-spacing: 0.15em;
+}
 
   .section-label::before {
-    width: 27px;
+    width: 34px;
   }
 
   .about-grid,
