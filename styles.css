@@ -22,13 +22,12 @@
 
   --dark: #151722;
   --dark-soft: #202332;
-
-  --blue: #5856e8;
-  --blue-dark: #4543c7;
-
-  --violet: #8b5cf6;
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+   
+  --violet: #60a5fa;
   --mint: #b9f5d0;
-  --cyan: #8be8ed;
+  --cyan: #67e8f9;
 
   --line: rgba(21, 23, 34, 0.11);
   --line-dark: rgba(255, 255, 255, 0.12);
@@ -803,17 +802,33 @@ body.dark .btn-primary {
 .section-label {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 14px;
 
   margin-bottom: 52px;
 
   color: var(--muted);
 
-  font-size: 9px;
+  font-size: 12px;
 
-  letter-spacing: 0.12em;
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
 
   text-transform: uppercase;
+}
+
+.section-label::before {
+  content: "";
+
+  width: 48px;
+  height: 2px;
+
+  background: var(--blue);
+
+  border-radius: 999px;
+}
+
+text-transform: uppercase;
 }
 
 .section-label::before {
@@ -1382,14 +1397,14 @@ body.dark .btn-primary {
   background:
     radial-gradient(
       circle at 15% 20%,
-      rgba(185, 245, 208, 0.32),
+      rgba(103, 232, 249, 0.22),
       transparent 22%
     ),
     linear-gradient(
       135deg,
-      var(--blue),
-      #6e58e9 55%,
-      var(--violet)
+      #2563eb 0%,
+      #1d4ed8 55%,
+      #0ea5e9 100%
     );
 
   color: white;
