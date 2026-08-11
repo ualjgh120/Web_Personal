@@ -752,7 +752,6 @@ body.dark .btn-primary {
 
 .marquee {
   position: relative;
-
   overflow: hidden;
 
   border-top: 1px solid var(--line);
@@ -764,22 +763,10 @@ body.dark .btn-primary {
 }
 
 .marquee-track {
+  display: flex;
   width: max-content;
 
-  display: flex;
-  align-items: center;
-
-  gap: 30px;
-
-  padding: 17px 0;
-
-  font:
-    10px
-    "DM Mono",
-    monospace;
-
-  animation:
-    scroll 28s linear infinite;
+  animation: marqueeInfinite 28s linear infinite;
 
   will-change: transform;
 }
@@ -788,23 +775,31 @@ body.dark .btn-primary {
   display: flex;
   align-items: center;
 
+  flex-shrink: 0;
+
   gap: 30px;
 
-  flex-shrink: 0;
+  padding-right: 30px;
 }
 
 .marquee i {
+  flex-shrink: 0;
+
   font-style: normal;
   color: var(--blue);
 }
 
-@keyframes scroll {
+.marquee-track span {
+  flex-shrink: 0;
+}
+
+@keyframes marqueeInfinite {
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(calc(-50% - 15px));
+    transform: translateX(-50%);
   }
 }
 
