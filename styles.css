@@ -750,50 +750,60 @@ body.dark .btn-primary {
    07. MARQUEE
    ========================================================= */
 
-.marquee {
-  position: relative;
-  overflow: hidden;
+/* =========================================
+   MARQUEE — BUCLE INFINITO
+========================================= */
 
+.marquee {
+  width: 100%;
+  overflow: hidden;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-
-  background: var(--surface-soft);
-
-  white-space: nowrap;
+  background: #191d2c;
+  position: relative;
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
-
-  animation: marqueeInfinite 28s linear infinite;
-
+  flex-wrap: nowrap;
+  animation: marquee-infinite 28s linear infinite;
   will-change: transform;
 }
 
 .marquee-group {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
-
-  flex-shrink: 0;
-
-  gap: 30px;
-
-  padding-right: 30px;
+  white-space: nowrap;
 }
 
-.marquee i {
+.marquee-group span {
+  display: inline-flex;
+  align-items: center;
   flex-shrink: 0;
+  padding: 20px 34px;
+  white-space: nowrap;
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #f4f5fa;
+}
 
+.marquee-group i {
+  flex-shrink: 0;
   font-style: normal;
-  color: var(--blue);
+  color: #2670ff;
+  font-size: 12px;
 }
 
-.marquee-track span {
-  flex-shrink: 0;
-}
-
-@keyframes marqueeInfinite {
+/*
+   Las dos copias son exactamente iguales.
+   Cuando la primera termina, la segunda ocupa
+   exactamente su lugar.
+*/
+@keyframes marquee-infinite {
   from {
     transform: translateX(0);
   }
