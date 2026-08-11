@@ -1817,7 +1817,43 @@ body.dark .btn-primary {
    ========================================================= */
 
 @media (max-width: 600px) {
+.hero-photo-frame {
+  width: min(340px, 88vw);
+  height: 420px;
+}
 
+.hero-photo-glow {
+  width: 330px;
+  height: 330px;
+}
+
+.hero-photo-info {
+  width: min(340px, 88vw);
+
+  font-size: 8px;
+}
+
+.section-label {
+  font-size: 13px;
+
+  gap: 12px;
+
+  margin-bottom: 36px;
+}
+
+.project-meta {
+  font-size: 11px;
+}
+
+.project-number {
+  font-size: 10px;
+}
+
+.contact-meta {
+  font-size: 13px;
+
+  gap: 10px 15px;
+}
   .container {
     width: calc(100% - 30px);
   }
