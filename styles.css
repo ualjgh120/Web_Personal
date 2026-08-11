@@ -1960,9 +1960,11 @@ body.dark .btn-primary {
 .section-label {
   margin-bottom: 38px;
 
-  font-size: 10px;
+  font-size: 14px;
 
-  letter-spacing: 0.15em;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
 }
 
   .section-label::before {
