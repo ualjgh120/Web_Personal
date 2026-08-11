@@ -533,16 +533,17 @@ body.dark .btn-primary {
 .btn span {
   margin-left: 8px;
 }
-
 .quick-links {
   display: flex;
   flex-wrap: wrap;
 
-  gap: 7px 17px;
+  gap: 8px 19px;
 
   color: var(--muted);
 
-  font-size: 9px;
+  font-size: 13px;
+
+  line-height: 1.5;
 }
 
 .quick-links a {
@@ -1944,12 +1945,10 @@ body.dark .btn-primary {
 
     min-height: 47px;
   }
-
-  .quick-links {
-    gap: 7px 13px;
-
-    font-size: 8px;
-  }
+.quick-links {
+  gap: 8px 14px;
+  font-size: 11px;
+}
 
   .hero-visual::before {
     width: 110px;
