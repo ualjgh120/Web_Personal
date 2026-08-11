@@ -829,8 +829,6 @@ body.dark .btn-primary {
   border-radius: 999px;
 }
 
-text-transform: uppercase;
-}
 
 .section-label::before {
   content: "";
