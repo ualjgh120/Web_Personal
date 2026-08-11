@@ -778,25 +778,33 @@ body.dark .btn-primary {
     monospace;
 
   animation:
-    scroll 34s linear infinite;
+    scroll 28s linear infinite;
+
+  will-change: transform;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  flex-shrink: 0;
 }
 
 .marquee i {
   font-style: normal;
-
   color: var(--blue);
 }
 
 @keyframes scroll {
-
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 15px));
   }
-
 }
 
 
