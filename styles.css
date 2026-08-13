@@ -741,6 +741,13 @@ body.dark .btn-primary {
    07. MARQUEE
    ========================================================= */
 
+/*
+   BARRA DE TECNOLOGÍAS / SKILLS EN MOVIMIENTO
+   ---------------------------------------------
+   AQUÍ ESTÁ EL CAMBIO PRINCIPAL:
+   El texto ahora es claramente más grande.
+*/
+
 .marquee {
   position: relative;
 
@@ -753,10 +760,17 @@ body.dark .btn-primary {
   background: var(--surface-soft);
 
   white-space: nowrap;
+
+  /*
+   * Más espacio vertical para que el texto
+   * grande respire correctamente.
+   */
+  padding: 17px 0;
 }
 
 .marquee-track {
   display: flex;
+
   width: max-content;
 
   will-change: transform;
@@ -766,20 +780,32 @@ body.dark .btn-primary {
 }
 
 .marquee-group {
-  font-size: 21px;
-  font-weight: 650;
-  letter-spacing: -0.02em;
-}
-
-.marquee-group {
   display: flex;
   align-items: center;
 
   flex: 0 0 auto;
 
-  gap: 30px;
+  /*
+   * TEXTO MÁS GRANDE
+   */
+  font-size: 21px;
 
-  padding-right: 30px;
+  /*
+   * Un poco más de peso para que destaque.
+   */
+  font-weight: 650;
+
+  /*
+   * Ajuste visual editorial.
+   */
+  letter-spacing: -0.02em;
+
+  /*
+   * Separación entre elementos.
+   */
+  gap: 34px;
+
+  padding-right: 34px;
 }
 
 .marquee-group span,
@@ -789,7 +815,14 @@ body.dark .btn-primary {
 
 .marquee-group i {
   font-style: normal;
+
   color: var(--blue);
+
+  /*
+   * Los puntos/separadores también
+   * quedan visualmente equilibrados.
+   */
+  font-size: 18px;
 }
 
 @keyframes marqueeInfinite {
@@ -1069,7 +1102,7 @@ body.dark .btn-primary {
 
 
 /* =========================================================
-   PROJECT CARD — ALTURA UNIFORME
+   PROJECT CARD
    ========================================================= */
 
 .project {
@@ -1077,10 +1110,6 @@ body.dark .btn-primary {
 
   grid-column: 1 / -1;
 
-  /*
-   * IMPORTANTE:
-   * Todos los proyectos tienen ahora la misma altura.
-   */
   min-height: 300px;
 
   height: 300px;
@@ -1154,15 +1183,6 @@ body.dark .btn-primary {
   transform: scale(1.5);
 }
 
-
-/*
-   ELIMINAMOS EL HEIGHT ESPECIAL DEL PRIMER PROYECTO.
-   Antes:
-   .project-large { min-height: 470px; }
-
-   Ahora mantiene exactamente la misma altura.
-*/
-
 .project-large {
   grid-column: 1 / -1;
 
@@ -1170,18 +1190,12 @@ body.dark .btn-primary {
   height: 300px;
 }
 
-
-/*
-   También igualamos project-wide.
-*/
-
 .project-wide {
   grid-column: 1 / -1;
 
   min-height: 300px;
   height: 300px;
 }
-
 
 .project-number {
   color: #8b91a3;
@@ -1665,14 +1679,24 @@ body.dark .btn-primary {
     gap: 55px;
   }
 
-  /*
-   * Mantener altura de proyectos
-   */
   .project,
   .project-large,
   .project-wide {
     min-height: 300px;
     height: 300px;
+  }
+
+  /*
+   * MARQUEE — TABLET / LAPTOP
+   */
+  .marquee-group {
+    font-size: 19px;
+    gap: 30px;
+    padding-right: 30px;
+  }
+
+  .marquee-group i {
+    font-size: 17px;
   }
 }
 
@@ -1794,10 +1818,6 @@ body.dark .btn-primary {
     grid-template-columns: 1fr;
   }
 
-  /*
-   * Tablets:
-   * todos iguales
-   */
   .project,
   .project-large,
   .project-wide {
@@ -1812,6 +1832,23 @@ body.dark .btn-primary {
       repeat(2, 1fr);
 
     row-gap: 35px;
+  }
+
+  /*
+   * MARQUEE — TABLET
+   */
+  .marquee {
+    padding: 15px 0;
+  }
+
+  .marquee-group {
+    font-size: 17px;
+    gap: 27px;
+    padding-right: 27px;
+  }
+
+  .marquee-group i {
+    font-size: 15px;
   }
 }
 
@@ -1981,14 +2018,36 @@ body.dark .btn-primary {
   }
 
 
-  /* ---------- MARQUEE ---------- */
+  /* =====================================================
+     MARQUEE — MOBILE
+     ===================================================== */
+
+  .marquee {
+    padding: 13px 0;
+  }
 
   .marquee-track {
-    padding: 15px 0;
+    gap: 0;
+  }
 
-    gap: 24px;
+  .marquee-group {
+    /*
+     * Antes era demasiado pequeño.
+     * Ahora se ve claramente.
+     */
+    font-size: 14px;
 
-    font-size: 9px;
+    font-weight: 650;
+
+    letter-spacing: -0.01em;
+
+    gap: 22px;
+
+    padding-right: 22px;
+  }
+
+  .marquee-group i {
+    font-size: 13px;
   }
 
 
@@ -2072,9 +2131,7 @@ body.dark .btn-primary {
   }
 
 
-  /* =====================================================
-     PROJECTS — MOBILE
-     ===================================================== */
+  /* ---------- PROJECTS ---------- */
 
   .projects-grid {
     grid-template-columns: 1fr;
@@ -2086,19 +2143,12 @@ body.dark .btn-primary {
   .project-wide {
     grid-column: auto;
 
-    /*
-     * Todos los proyectos exactamente iguales
-     */
     min-height: 315px;
     height: 315px;
 
     padding: 21px;
   }
 
-  /*
-   * IMPORTANTE:
-   * project-large YA NO es más alto.
-   */
   .project-large {
     min-height: 315px;
     height: 315px;
@@ -2280,9 +2330,6 @@ body.dark .btn-primary {
     gap: 9px;
   }
 
-  /*
-   * Proyectos siguen todos exactamente iguales
-   */
   .project,
   .project-large,
   .project-wide {
@@ -2299,6 +2346,23 @@ body.dark .btn-primary {
 
   .contact-inner h2 {
     font-size: 49px;
+  }
+
+  /*
+   * MARQUEE — TELÉFONOS MUY PEQUEÑOS
+   */
+  .marquee {
+    padding: 12px 0;
+  }
+
+  .marquee-group {
+    font-size: 13px;
+    gap: 19px;
+    padding-right: 19px;
+  }
+
+  .marquee-group i {
+    font-size: 12px;
   }
 }
 
