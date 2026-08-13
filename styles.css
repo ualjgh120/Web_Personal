@@ -766,6 +766,12 @@ body.dark .btn-primary {
 }
 
 .marquee-group {
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.marquee-group {
   display: flex;
   align-items: center;
 
