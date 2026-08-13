@@ -741,13 +741,6 @@ body.dark .btn-primary {
    07. MARQUEE
    ========================================================= */
 
-/*
-   BARRA DE TECNOLOGÍAS / SKILLS EN MOVIMIENTO
-   ---------------------------------------------
-   AQUÍ ESTÁ EL CAMBIO PRINCIPAL:
-   El texto ahora es claramente más grande.
-*/
-
 .marquee {
   position: relative;
 
@@ -761,10 +754,6 @@ body.dark .btn-primary {
 
   white-space: nowrap;
 
-  /*
-   * Más espacio vertical para que el texto
-   * grande respire correctamente.
-   */
   padding: 17px 0;
 }
 
@@ -785,24 +774,12 @@ body.dark .btn-primary {
 
   flex: 0 0 auto;
 
-  /*
-   * TEXTO MÁS GRANDE
-   */
   font-size: 21px;
 
-  /*
-   * Un poco más de peso para que destaque.
-   */
   font-weight: 650;
 
-  /*
-   * Ajuste visual editorial.
-   */
   letter-spacing: -0.02em;
 
-  /*
-   * Separación entre elementos.
-   */
   gap: 34px;
 
   padding-right: 34px;
@@ -818,10 +795,6 @@ body.dark .btn-primary {
 
   color: var(--blue);
 
-  /*
-   * Los puntos/separadores también
-   * quedan visualmente equilibrados.
-   */
   font-size: 18px;
 }
 
@@ -973,12 +946,24 @@ body.dark .btn-primary {
    10. EXPERIENCE
    ========================================================= */
 
+/*
+   EXPERIENCIA
+   ---------------------------------------------------------
+   Al pasar el ratón:
+   - NO se desplaza hacia la derecha.
+   - Aumenta ligeramente de tamaño.
+   - Aparece una línea azul lateral.
+   - Se añade una sombra muy sutil.
+*/
+
 .timeline {
   border-top:
     1px solid var(--line);
 }
 
 .timeline-item {
+  position: relative;
+
   display: grid;
 
   grid-template-columns:
@@ -993,12 +978,57 @@ body.dark .btn-primary {
     1px solid var(--line);
 
   transition:
-    padding-left 0.3s ease,
-    background 0.3s ease;
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .timeline-item:hover {
-  padding-left: 12px;
+  transform: scale(1.015);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.025),
+      rgba(37, 99, 235, 0.055),
+      rgba(37, 99, 235, 0.025)
+    );
+
+  border-bottom-color:
+    rgba(37, 99, 235, 0.28);
+
+  box-shadow:
+    0 12px 35px rgba(21, 23, 34, 0.07);
+}
+
+.timeline-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -18px;
+  top: 50%;
+
+  width: 3px;
+  height: 0;
+
+  border-radius: 999px;
+
+  background: var(--blue);
+
+  transform: translateY(-50%);
+
+  opacity: 0;
+
+  transition:
+    height 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.timeline-item:hover::before {
+  height: 55%;
+  opacity: 1;
 }
 
 .date {
@@ -1686,9 +1716,6 @@ body.dark .btn-primary {
     height: 300px;
   }
 
-  /*
-   * MARQUEE — TABLET / LAPTOP
-   */
   .marquee-group {
     font-size: 19px;
     gap: 30px;
@@ -1834,9 +1861,6 @@ body.dark .btn-primary {
     row-gap: 35px;
   }
 
-  /*
-   * MARQUEE — TABLET
-   */
   .marquee {
     padding: 15px 0;
   }
@@ -2018,9 +2042,7 @@ body.dark .btn-primary {
   }
 
 
-  /* =====================================================
-     MARQUEE — MOBILE
-     ===================================================== */
+  /* ---------- MARQUEE ---------- */
 
   .marquee {
     padding: 13px 0;
@@ -2031,10 +2053,6 @@ body.dark .btn-primary {
   }
 
   .marquee-group {
-    /*
-     * Antes era demasiado pequeño.
-     * Ahora se ve claramente.
-     */
     font-size: 14px;
 
     font-weight: 650;
@@ -2114,7 +2132,28 @@ body.dark .btn-primary {
 
   .timeline-item {
     display: block;
+
     padding: 27px 0;
+
+    /*
+      En móvil no usamos hover.
+      El contenido permanece completamente estable.
+    */
+    transform: none;
+  }
+
+  .timeline-item::before {
+    display: none;
+  }
+
+  .timeline-item:hover {
+    transform: none;
+
+    background: transparent;
+
+    border-bottom-color: var(--line);
+
+    box-shadow: none;
   }
 
   .date {
@@ -2348,9 +2387,6 @@ body.dark .btn-primary {
     font-size: 49px;
   }
 
-  /*
-   * MARQUEE — TELÉFONOS MUY PEQUEÑOS
-   */
   .marquee {
     padding: 12px 0;
   }
@@ -2410,4 +2446,5 @@ body.dark .btn-primary {
     opacity: 1;
     transform: none;
   }
+
 }
