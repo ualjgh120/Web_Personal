@@ -224,11 +224,11 @@ body.dark .nav-wrap {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 34px;
+  gap: 38px;
 
   color: var(--ink-soft);
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 650;
 }
 
